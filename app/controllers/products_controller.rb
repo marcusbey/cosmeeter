@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @ = Product.all
+    @product = Product.all
   end
 
   def show
