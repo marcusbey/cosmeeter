@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    set_user
     # TODO
   end
 
@@ -31,7 +32,7 @@ class UsersController < ApplicationController
 
   private
 
-  def set_cocktail
+  def set_user
     @user = User.find(params[:id])
   end
 
