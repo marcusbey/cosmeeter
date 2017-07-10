@@ -10,10 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170710181512) do
+ActiveRecord::Schema.define(version: 20170710183135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string   "name"
+    t.string   "quantity"
+    t.integer  "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_ingredients_on_product_id", using: :btree
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "picture_url"
+    t.float    "price"
+    t.integer  "stock"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.string   "status"
+    t.date     "date"
+    t.integer  "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_reservations_on_product_id", using: :btree
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "content"
+    t.integer  "product_id"
+    t.integer  "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_reviews_on_product_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -28,8 +65,21 @@ ActiveRecord::Schema.define(version: 20170710181512) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "product_id"
+    t.string   "name"
+    t.string   "bio"
+    t.string   "address"
+    t.string   "city"
+    t.integer  "reservation_id"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["product_id"], name: "index_users_on_product_id", using: :btree
+    t.index ["reservation_id"], name: "index_users_on_reservation_id", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "ingredients", "products"
+  add_foreign_key "reservations", "products"
+  add_foreign_key "reviews", "products"
+  add_foreign_key "users", "products"
+  add_foreign_key "users", "reservations"
 end
