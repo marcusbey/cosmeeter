@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index ]
+
   def new
     @product = Product.new
   end
@@ -38,7 +40,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
-  def cocktail_params
+  def product_params
     params.require(:product).permit(:name, :photo, :photo_cache)
   end
 end
