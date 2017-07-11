@@ -2,14 +2,22 @@
     <div class="nav-wrapper">
       <%= link_to "Cosmeeter", root_path, class: "brand-logo"%>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <% if user_signed_in? %>
+        <% if user_signed_in? %>
+        <!-- Dropdown Trigger -->
         <li><%= link_to "Add a product", new_product_path %></li>
-        <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-      <% else %>
+        <a class='dropdown-button btn' href='#' data-activates='dropdown1'><%= current_user.name %></a>
+        <!-- Dropdown Structure -->
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><%= link_to "Profile", user_index_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Reservation", user_reservations_path(current_user) %></li>
+          <li class="divider"></li>
+          <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+        </ul>
+        <% else %>
         <li><%= link_to 'Sign Up', new_user_registration_path %></li>
         <li><%= link_to 'Log In', new_user_session_path %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
-</nav>
-
+  </nav>
