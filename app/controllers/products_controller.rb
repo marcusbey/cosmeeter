@@ -34,6 +34,8 @@ class ProductsController < ApplicationController
 
   def destroy
     set_product
+    @product.delete
+    redirect_to products_path
   end
 
   private
