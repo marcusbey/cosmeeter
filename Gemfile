@@ -14,13 +14,14 @@ gem 'jquery-rails'
 gem 'uglifier'
 gem 'materialize-sass'
 gem 'font-awesome-sass'
+gem 'simple_form_materialize'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
-  
+
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
