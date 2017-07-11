@@ -14,6 +14,7 @@ gem 'jquery-rails'
 gem 'uglifier'
 gem 'materialize-sass'
 gem 'font-awesome-sass'
+gem 'simple_form_materialize'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
