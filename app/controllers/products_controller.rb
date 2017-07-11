@@ -1,10 +1,14 @@
 class ProductsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index ]
+
   def new
     @product = Product.new
   end
 
   def create
     @product = Product.new(product_params)
+    @product.user = current_user
+
     if @product.save
       redirect_to product_path(@product)
     else
@@ -13,7 +17,7 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @product = Product.all
+    @products = Product.all
   end
 
   def show
@@ -38,7 +42,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
-  def cocktail_params
-    params.require(:product).permit(:name, :photo, :photo_cache)
+  def product_params
+    params.require(:product).permit(:name, :description, :price, :stock)
   end
 end
