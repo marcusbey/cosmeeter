@@ -2,3 +2,24 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Damion|Lovers+Quarrel');
+
+.btn-home {
+  background-color: rgba(255, 239, 119, 0.9);
+  border-radius: 5px;
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+  }
+
+
+.btn-home:hover {
+   background-color: rgba(192, 171, 18, 0.8);
+}
+
+.logo>h1 {
+  font-family: 'Damion', cursive;
+  font-size: 8em;
+}
+
