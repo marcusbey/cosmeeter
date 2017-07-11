@@ -5,10 +5,11 @@
         <% if user_signed_in? %>
         <!-- Dropdown Trigger -->
         <li><%= link_to "Add a product", new_product_path %></li>
-        <a class='dropdown-button btn' href='#' data-activates='dropdown1'><%= current_user.name %></a>
+        <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
+        <a class='dropdown-button btn' href='#' data-activates='dropdown1'><%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %></a>
         <!-- Dropdown Structure -->
         <ul id='dropdown1' class='dropdown-content'>
-          <li><%= link_to "Profile", user_index_path %></li>
+          <li><%= link_to "Profile", user_path(current_user) %></li>
           <li class="divider"></li>
           <li><%= link_to "Reservation(s)", user_reservations_path(current_user) %></li>
           <li class="divider"></li>
