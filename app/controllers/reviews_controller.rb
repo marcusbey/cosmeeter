@@ -12,7 +12,6 @@ class ReviewsController < ApplicationController
     else
       render :new
     end
-    end
   end
 
   def update
