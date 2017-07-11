@@ -1,2 +1,27 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="container">
+  <h2 class="title">Cosmeeter</h2>
+  <div class="row">
+
+    <% @products.each do |product| %>
+    <div class="col-xs-6 col-sm-4 col-md-3">
+      <div class="card"
+      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+      url('https://unsplash.it/200/300/?random')">
+      <div class="card-category">Product # <%= product.id %></div>
+      <div class="card-description">
+        <h2><%= product.name %></h2>
+        <p></p>
+      </div>
+      <%= link_to product.name, product, {class: "card-link"} %>
+    </div>
+  </div>
+  <% end %>
+</div>
+</div>
+
+<div class="container">
+  <%= link_to "Add a new product", new_product_path, {class: "btn btn-primary"} %>
+</div>
