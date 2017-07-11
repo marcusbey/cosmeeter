@@ -8,7 +8,7 @@
         <a class='dropdown-button btn' href='#' data-activates='dropdown1'><%= current_user.name %></a>
         <!-- Dropdown Structure -->
         <ul id='dropdown1' class='dropdown-content'>
-          <li><%= link_to "Profile", user_path %></li>
+          <li><%= link_to "Profile", user_index_path %></li>
           <li class="divider"></li>
           <li><%= link_to "Reservation(s)", user_reservations_path(current_user) %></li>
           <li class="divider"></li>
