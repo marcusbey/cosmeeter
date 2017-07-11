@@ -3,6 +3,7 @@ class Product < ApplicationRecord
   has_many :reviews
   has_many :ingredients
   has_many :reservations
+  has_attachment :photo
   belongs_to :user
 
 
