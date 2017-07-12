@@ -22,6 +22,14 @@ class ProductsController < ApplicationController
 
   def show
     set_product
+    @user = User.find(@product.user)
+    @product_coordinates = { lat: @user.latitude, lng: @user.longitude }
+
+    @hash = Gmaps4rails.build_markers(@user) do |product, marker|
+      marker.lat product.latitude
+      marker.lng product.longitude
+    end
+
   end
 
   def edit

@@ -12,4 +12,6 @@ class Product < ApplicationRecord
   validates :price, presence: true
   validates :stock, presence: true
   validates :photo, presence: true
+
+
 end
