@@ -13,10 +13,6 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
-  def full_address
-    [:address, :city].compact.join(", ")
-  end
-
 
   geocoded_by :full_address
   after_validation :geocode, if: :address_changed?
@@ -40,6 +36,10 @@ class User < ApplicationRecord
     end
 
     return user
+  end
+
+  def full_address
+    return address + ", " + city
   end
 
 end
