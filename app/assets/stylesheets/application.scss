@@ -11,13 +11,13 @@
 // Your CSS
 @import "layout/footer";
 @import "layout/index";
-@import "layout/navbar";
+
+@import "components/navbar";
 @import "components/index";
+@import "components/card";
+@import "components/banner";
+
 @import "pages/index";
 @import "vendor/index";
-
-.card {
-  margin-top: 30px;
-}
 
 
