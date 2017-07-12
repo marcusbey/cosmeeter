@@ -5,5 +5,6 @@
 //= require attachinary
 //= require materialize
 //= require materialize/extras/nouislider
+//= require underscore
+//= require gmaps/google
 //= require_tree .
-

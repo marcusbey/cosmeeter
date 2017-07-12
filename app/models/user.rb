@@ -12,6 +12,16 @@ class User < ApplicationRecord
   has_attachment :photo
 
   validates :name, presence: true
+  validates :address, presence: true
+  validates :city, presence: true
+
+  def full_address
+    [:address, :city].compact.join(", ")
+  end
+
+
+  geocoded_by :full_address
+  after_validation :geocode, if: :address_changed?
 
   def self.find_for_facebook_oauth(auth)
     user_params = auth.slice(:provider, :uid)
