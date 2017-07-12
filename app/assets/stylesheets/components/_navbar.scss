@@ -2,16 +2,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #EA80FC;
 }
 
 .avatar {
   border-radius: 30px;
-  margin-top: 6px;
+  margin-top: 14px;
   margin-right: 6px;
-  margin-left: 6px;
+  margin-left: 12px;
 }
 
 nav {
-  background-color: #EA80FC;
+  background-color: #FFEED4;
+  color: black;
 }
+
+#dropdown1 {
+  position: absolute !important;
+  top: 64px !important;
+  left: 1546px!important;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+  padding: 14px 7px;
+}
+
