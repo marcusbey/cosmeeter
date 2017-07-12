@@ -20,3 +20,9 @@
   </div>
 
 </div>
+
+<%= javascript_tag do %>
+  $(document).ready(function() {
+    alert('<%= @alert_message %>');
+  });
+<% end %>
