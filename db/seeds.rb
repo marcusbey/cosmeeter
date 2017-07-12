@@ -1,6 +1,6 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-
+user = User.create(name: "Milan", address:"5333 rue Casgrain", city:"Montreal", email:"milan@milan.com", password:"12345678")
 
 Product.create!([{name: 'Aloe Butter',
                  price: '12$',
@@ -10,7 +10,8 @@ Product.create!([{name: 'Aloe Butter',
                  photo_url:'http://www.voyageursoapandcandle.com/v/vspfiles/photos/62004-2.jpg',
                  recipe:'Pure Aloe Vera Extract infused in Coconut Oil creating a soft butter that is an excellent addition to creams,
                          lotions, massage products, salves, balms etc. 227gr',
-                 stock: '4', },
+                 stock: '4',
+                 user_id: user.id},
 
                 {name:'Black Charcoal Unscented Bar Soap',
                  price:'4$',
@@ -19,7 +20,8 @@ Product.create!([{name: 'Aloe Butter',
                               Soap also contains skin-softening Shea Butter, and is unscented.',
                  photo_url: 'http://www.voyageursoapandcandle.com/v/vspfiles/photos/94394-2T.jpg',
                  recipe: 'Ingredients: Palm Oil, Coconut Oil, Olive Oil, Shea Butter, Activated Charcoal. 150gr',
-                 stock: '2'},
+                 stock: '2',
+                 user_id: user.id},
 
                 {name:'Suspending Nail Polish Base',
                  price:'9$',
@@ -30,7 +32,8 @@ Product.create!([{name: 'Aloe Butter',
                  recipe: 'Ingredients: Butyl Acetate, Ethyl Acetate, Nitrocellulose, Acetyl Tributyl Citrate, Adipic Acid/Neopentyl Glycol/
                           Trimellitic Anhydride Copolymer, Isopropyl Alcohol, Acrylates Copolymer, Stearalkonium Bentonite, Styrene/ Acrylates
                           Copolymer, Silica, Alumina, Benzophenone-1, Trimethylpentanediyl Dibenzoate. 100gr',
-                 stock: '10'},
+                 stock: '10',
+                 user_id: user.id},
 
                 {name:'Vitamin Rich Massage & Bath Oil - Unscented',
                  price:'8$',
@@ -39,7 +42,8 @@ Product.create!([{name: 'Aloe Butter',
                               your skin.',
                  photo_url: 'http://www.voyageursoapandcandle.com/v/vspfiles/photos/43218-2.jpg',
                  recipe: 'Ingredients: Sunflower oil, Grapeseed oil, Sweet Almond oil, Sea Buckthorn oil, Vitamin E. 200ml',
-                 stock: '2'},
+                 stock: '2',
+                 user_id: user.id},
 
                 {name:'CHANTILLY DE KARITÉ À LA FRAMBOISE',
                  price:'7$',
@@ -49,7 +53,8 @@ Product.create!([{name: 'Aloe Butter',
                  photo_url: 'https://www.aroma-zone.com/cms/sites/default/files/imagecache/preset-recette-detail/Recette_cosmetique/S203957_Chantilly-Karite-Framboise_web.jpg',
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
-                 stock: '24'}
+                 stock: '24',
+                 user_id: user.id}
                ])
 
 
