@@ -86,7 +86,6 @@ ActiveRecord::Schema.define(version: 20170712171826) do
     t.string   "bio"
     t.string   "address"
     t.string   "city"
-    t.string   "avatar"
     t.string   "photo"
     t.string   "provider"
     t.string   "uid"
