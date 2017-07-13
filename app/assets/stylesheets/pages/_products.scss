@@ -2,7 +2,7 @@
 
   background-color : grey;
   margin: 10px;
-  height: 340px;
+  height: 300px;
   width: 280px;
 }
 
@@ -12,5 +12,6 @@
 }
 
 .products-grid {
-
+overflow:scroll;
+height: 80vh;
 }
