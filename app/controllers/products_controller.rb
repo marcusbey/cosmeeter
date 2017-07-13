@@ -22,6 +22,7 @@ class ProductsController < ApplicationController
 
   def show
     set_product
+    @reservation = Reservation.new
     @user = User.find(@product.user)
     @product_coordinates = { lat: @user.latitude, lng: @user.longitude }
 
