@@ -1,0 +1,27 @@
+.alert {
+  margin: 0;
+  text-align: center;
+  color: white;
+  padding: 25px 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  & span, button {
+    display: none;
+  }
+}
+
+.alert-info {
+  background: #34C16A;
+}
+
+.alert-warning, .alert-danger {
+  background: #F45060 ;
+}
+
+.alert:empty {
+  display: none;
+}
+
