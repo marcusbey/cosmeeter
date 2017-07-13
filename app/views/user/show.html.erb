@@ -1,29 +1,3 @@
-<div class="container">
-  <div class="row">
-    <div class="col s12 m12">
-      <div class="card card-fb">
-        <div class="card-image">
-          <%= image_tag @user.facebook_picture_url %>
-        </div>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a href="mesproduits.html">Sass</a></li>
-          <li><a href="Ajouter un produit">Components</a></li>
-          <li><a href="Chercher un produit">JavaScript</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
 <div class="row">
   <div class="col s3">
     <div class="container">
@@ -32,18 +6,21 @@
   </div>
   <div class="col s3">
     <h4 class="profile-element">Profil de <%= @user.name %></h4>
-    <h2 class="profile-element">Registered address: <%= @user.address %></h2>
-    <h2 class="profile-element">My reservations:</h2>
-    <% if @user.reservations != nil %>
-    <% @user.reservations.each do |reservation|%>
+    <h4 class="profile-element">Registered address:</h4> <p><%= @user.address %></p>
+    <h4 class="profile-element">My reservations:</h4>
+    <% @id = current_user.id %>
+    <% @reservations = Reservation.where(user_id: @id) %>
+    <% @reservations.each do |reservation|%>
     <ul class="list-unstyled">
-    <li>Product id:<%= reservation.product_id %></li>
+    <li>Product: <%= reservation.product.name %></li>
     <li>Date: <%= reservation.date %></li>
     </ul>
     <% end %>
-    <% end %>
-    <h2 class="profile-element">My products:</h2>
-    <% @user.products.each do |product| %>
+
+    <h4 class="profile-element">My products:</h4>
+    <% @id = current_user.id %>
+    <% @products = Product.where(user_id: @id) %>
+    <% @products.each do |product| %>
     <ul class="list-unstyled">
       <li><%= product.name %> </li>
       <li><%= product.price %> $</li>
