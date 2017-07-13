@@ -1,4 +1,4 @@
-<%= simple_form_for [@product, @reservation] do |f| %>
+<div class="container"> <%= simple_form_for [@product, @reservation] do |f| %>
 <h2>New reservation:</h2>
 <%= f.error_notification %>
 <%= f.input :date, as: :string, :placeholder => 'Select Date', input_html: {class:"datepicker"} %>
@@ -6,3 +6,4 @@
 <% end %>
 
 <%= link_to 'Back', @product_path %>
+</div>
