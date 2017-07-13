@@ -1,17 +1,16 @@
-#products-index .row {
-  margin-top: 75px;
-}
-
 #products-index .fake-card {
 
   background-color : grey;
   margin: 10px;
-  height: 340px;
-  width: 260px;
+  height: 300px;
+  width: 280px;
 }
 
 .filter_bar {
-  background-color: lightgrey;
   height:120px;
+}
 
+.products-grid {
+overflow:scroll;
+height: 80vh;
 }
