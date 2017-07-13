@@ -1,5 +1,5 @@
 <div class="container product-show">
-<div class="container main">
+  <div class="container main">
     <h3><%= @product.name %></h3>
     <% if @product.photo? %>
     <%= cl_image_tag @product.photo.path, width: 600, height: 400, crop: :scale %>
@@ -13,37 +13,37 @@
 
     <%= simple_form_for [@product, @reservation] do |f| %>
     <h3>Reserve this product:</h2>
-      <%= f.error_notification %>
+    <%= f.error_notification %>
 
-      <%= f.input :date, as: :string, :placeholder => 'Select Date', input_html: {class:"datepicker"}%>
-      <%= f.button :submit %>
+    <%= f.input :date, as: :string, :placeholder => 'Select Date', input_html: {class:"datepicker"}%>
+    <%= f.button :submit %>
 
-      <% end %>
-      <div class="btn-product">
-        <%= link_to "Back to product list", products_path, class: "waves-effect waves-light btn" %>
-      </div>
-      <% if @product.user = current_user %>
-      <%= link_to "Delete this product", product_path(@product), method: :delete, class: "waves-effect waves-light btn btn-product" %>
-      <% end %>
+    <% end %>
+    <div class="btn-product">
+      <%= link_to "Back to product list", products_path, class: "waves-effect waves-light btn" %>
     </div>
+    <% if @product.user = current_user %>
+    <%= link_to "Delete this product", product_path(@product), method: :delete, class: "waves-effect waves-light btn btn-product" %>
+    <% end %>
   </div>
-  <div class="container">
-    <div class="col s12 m12">
-      <div id="map" style="width: 100%; height: 600px;"></div>
-    </div>
+</div>
+<div class="container">
+  <div class="col s12 m12">
+    <div id="map" style="width: 100%; height: 600px;"></div>
   </div>
+</div>
 
 
-  <% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-  $(document).ready(function() {
-  var handler = Gmaps.build('Google');
-  handler.buildMap({ internal: { id: 'map' } }, function() {
-  markers = handler.addMarkers(<%= raw @hash.to_json %>);
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
-  if (markers.length == 0) {
-  handler.getMap().setZoom(2);
+<% content_for(:after_js) do %>
+<%= javascript_tag do %>
+$(document).ready(function() {
+var handler = Gmaps.build('Google');
+handler.buildMap({ internal: { id: 'map' } }, function() {
+markers = handler.addMarkers(<%= raw @hash.to_json %>);
+handler.bounds.extendWith(markers);
+handler.fitMapToBounds();
+if (markers.length == 0) {
+handler.getMap().setZoom(2);
 } else if (markers.length == 1) {
 handler.getMap().setZoom(14);
 }

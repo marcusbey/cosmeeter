@@ -18,6 +18,15 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+
+    @hash = Gmaps4rails.build_markers(@products) do |product, marker|
+      user = User.find(product.user_id)
+      if !user.latitude.nil? && !user.longitude.nil?
+        marker.lat user.latitude
+        marker.lng user.longitude
+      end
+    end
+
   end
 
   def show
@@ -30,8 +39,21 @@ class ProductsController < ApplicationController
       marker.lat product.latitude
       marker.lng product.longitude
     end
-
   end
+
+  # def showall
+  #   @user = User.find(@product.user)
+  #   @products = Product.all
+  #   @products.each  do |product|
+  #     set_product
+  #     @reservation = Reservation.new
+  #     @product_coordinates = { lat: @user.latitude, lng: @user.longitude }
+  #     @hash_all = Gmaps4rails.build_markers(@user) do |product, marker|
+  #       marker.lat product.latitude
+  #       marker.lng product.longitude
+  #     end
+  #   end
+  # end
 
   def edit
     set_product
