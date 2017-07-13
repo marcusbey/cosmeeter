@@ -11,9 +11,6 @@ class User < ApplicationRecord
   has_many :products, through: :reservation
   has_attachment :photo
 
-  validates :name, presence: true
-
-
   geocoded_by :full_address
   after_validation :geocode, if: :address_changed?
 
