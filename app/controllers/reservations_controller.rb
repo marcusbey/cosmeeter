@@ -1,14 +1,17 @@
 class ReservationsController < ApplicationController
   def new
     @reservation = Reservation.new
-    @product = Product.find(params[:product_id])
+    @product = Product.find(params[:id])
     @reservation.product = @product
+    @reservation.user = current_user
   end
 
   def create
     @reservation = Reservation.new(reservation_params)
+    @reservation.user = current_user
+    @reservation.product = Product.find(params[:product_id])
     if @reservation.save
-      redirect_to reservation_path(@reservation)
+      redirect_to products_path
     else
       render :new
     end

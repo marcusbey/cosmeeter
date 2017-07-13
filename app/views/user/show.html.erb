@@ -5,22 +5,58 @@
         <div class="card-image">
           <%= image_tag @user.facebook_picture_url %>
         </div>
-
         <ul id="nav-mobile" class="left hide-on-med-and-down">
           <li><a href="mesproduits.html">Sass</a></li>
           <li><a href="Ajouter un produit">Components</a></li>
           <li><a href="Chercher un produit">JavaScript</a></li>
         </ul>
-
-
       </div>
     </div>
   </div>
-
 </div>
 
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col s3">
+    <div class="container">
+      <%= image_tag @user.facebook_picture_url, class: "avatar-profile" %>
+    </div>
+  </div>
+  <div class="col s3">
+    <h4 class="profile-element">Profil de <%= @user.name %></h4>
+    <h2 class="profile-element">Registered address: <%= @user.address %></h2>
+    <h2 class="profile-element">My reservations:</h2>
+    <% if @user.reservations != nil %>
+    <% @user.reservations.each do |reservation|%>
+    <ul class="list-unstyled">
+    <li>Product id:<%= reservation.product_id %></li>
+    <li>Date: <%= reservation.date %></li>
+    </ul>
+    <% end %>
+    <% end %>
+    <h2 class="profile-element">My products:</h2>
+    <% @user.products.each do |product| %>
+    <ul class="list-unstyled">
+      <li><%= product.name %> </li>
+      <li><%= product.price %> $</li>
+      <li></li>
+    </ul>
+    <% end %>
+  </div>
+</div>
+
+
+
 <%= javascript_tag do %>
-  $(document).ready(function() {
-    alert('<%= @alert_message %>');
-  });
+$(document).ready(function() {
+alert('<%= @alert_message %>');
+});
 <% end %>
