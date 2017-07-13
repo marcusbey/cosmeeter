@@ -1,0 +1,29 @@
+.login-signup {
+min-height: 300px;
+margin-top: 100px;
+padding: 30px 50px 30px 50px;
+}
+
+#signin .row .col {
+padding: 0;
+float: none;
+  }
+
+#signin .btn, #signin .btn-large  {
+  background-color: rgba(255, 223, 164, 0.8);
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+#signin .btn:hover, #signin .btn-large:hover {
+   background-color: rgba(255, 206, 112, 0.7);
+}
+
+#signin a {
+  color: rgba(0,0,0, 0.6);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

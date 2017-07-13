@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Damion|Lovers+Quarrel');
 
 
-.btn-home {
+.btn-home, .btn:hover, .btn-large:hover {
   background-color: rgba(255, 223, 164, 0.8);
   border-radius: 5px;
   a {
@@ -15,7 +15,7 @@
   }
 }
 
-.btn-home:hover {
+.btn-home:hover, .btn:hover, .btn-large:hover {
    background-color: rgba(255, 206, 112, 0.7);
 }
 
