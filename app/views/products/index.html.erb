@@ -13,8 +13,8 @@
     <div class="row">
       <div class="col s9">
         <% @products.each do |product| %>
-        <div class=" col s3 fake-card">
-          <%= render 'shared/card-product' %>
+        <div class=" col s3 ">
+          <%= render 'shared/card-product', locals: {:product => product} %>
         </div>
         <% end %>
       </div>

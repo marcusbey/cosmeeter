@@ -1,18 +1,23 @@
-<div class="centerflipcards">
-  <div class="square-flip">
-    <div class='square' data-image=<%= cl_image_tag @product.photo.path, width: 600, height: 400, crop: :scale %>>
-      <div class="square-container">
-        <h2 class="textshadow"><%= product.name %></h2>
-        <h3 class="textshadow"><%= product.description %></h3>
-      </div>
-      <div class="flip-overlay"></div>
+<% @product = locals[:product] %>
+
+  <div class="wrapper">
+    <div class="product-img">
+    <%= cl_image_tag @product.photo.path, width: 327, height: 420%>
     </div>
-    <div class='square2' data-image=<%= cl_image_tag @product.photo.path, width: 600, height: 400, crop: :scale %>>
-      <div class="square-container2">
-        <div class="align-center"></div>
-        <a href="http://kallyas.net" target="_blank" class="boxshadow kallyas-button">View Demos</a>
+    <div class="product-info">
+      <div class="product-text">
+        <h1><%= @product.name %></h1>
+        <h2><%= @current_user %></h2>
+        <p><%= @product.description %></p>
       </div>
-      <div class="flip-overlay"></div>
+      <div class="product-price-btn">
+        <p>Price: <%= @product.price %> $</p>
+        <!-- <button type="button">View Product</button> -->
+        <button><%= link_to "View Product", @product %></button>
+      </div>
     </div>
   </div>
-</div>
+
+</body>
+
+</html>
