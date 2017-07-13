@@ -12,8 +12,9 @@
     <% @reservations = Reservation.where(user_id: @id) %>
     <% @reservations.each do |reservation|%>
     <ul class="list-unstyled">
-    <li>Product: <%= reservation.product.name %></li>
+    <li><%= link_to reservation.product.name, reservation.product %></li>
     <li>Date: <%= reservation.date %></li>
+    <li><%= link_to "Cancel reservation", user_path(current_user) %></li>
     </ul>
     <% end %>
 
@@ -22,9 +23,10 @@
     <% @products = Product.where(user_id: @id) %>
     <% @products.each do |product| %>
     <ul class="list-unstyled">
-      <li><%= product.name %> </li>
-      <li><%= product.price %> $</li>
-      <li></li>
+      <li><%= link_to product.name, product %> </li>
+      <li>Description: <%= product.description %></li>
+      <li>Price: <%= product.price %> $</li>
+      <li>Stock: <%= product.stock %></li>
     </ul>
     <% end %>
   </div>
