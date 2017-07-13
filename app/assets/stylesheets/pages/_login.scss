@@ -1,0 +1,37 @@
+#signin {
+  // background-color: rgba(255, 223, 164, 0.8);
+  padding-top: 80px;
+}
+
+.login-signup {
+min-height: 250px;
+padding: 30px 50px 30px 50px;
+}
+
+#signin .row .col {
+padding: 0;
+float: none;
+  }
+
+#signin .btn, #signin .btn-large  {
+  background-color: rgba(250, 213, 255, 1);
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+#signin .btn:hover, #signin .btn-large:hover {
+   background-color: rgba(186, 104, 200, 0.9);
+}
+
+#signin a {
+  display: block;
+  color: rgba(0,0,0, 0.6);
+}
+
+#signin textarea {
+  background-color: #FFDFA4;
+}
+
