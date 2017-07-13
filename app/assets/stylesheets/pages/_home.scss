@@ -3,6 +3,7 @@
  * (margin/padding adjustments)
  * ------------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=Damion|Lovers+Quarrel');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
 .btn-home {
   background-color: rgba(255, 238, 212, 0.8);
@@ -24,3 +25,18 @@
   font-size: 8em;
 }
 
+.promotion {
+font-family: 'Josefin Sans', sans-serif;
+padding-top: 40px;
+padding-bottom: 40px;
+}
+
+.promotion p {
+  font-size: 18px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.icon-block>h3 {
+  font-family: 'Josefin Sans', sans-serif;
+}
