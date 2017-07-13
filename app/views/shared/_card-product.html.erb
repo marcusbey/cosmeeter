@@ -1,1 +1,15 @@
+<% @product = locals[:product] %>
 
+<div class='wrapper product-text background-white'>
+  <div class='product-img'>
+    <%= cl_image_tag @product.photo.path, class: 'product-img-size' %>
+  </div>
+  <div class='product-details'>
+    <h1><%= @product.name %></h1>
+    <h2>by <%= @product.user.name %></h2>
+    <p><%= @product.description %></p>
+  </div>
+    <p id='price-text'><%= @product.price %> $</p>
+        <!-- <button type="button">View Product</button> -->
+    <div class="product-btn"><%= link_to "View Product", @product %></div>
+</div>

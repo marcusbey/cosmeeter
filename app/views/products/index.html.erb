@@ -10,12 +10,13 @@
 
       </div>
     </div>
+  
     <div class="row product-list">
       <div class="col s12 m8 l8 products-grid">
         <% @products.each do |product| %>
-        <div class=" col s3">
-          <%= render 'shared/card-product' %>
-        </div>
+          <div class=" col s3">
+            <%= render 'shared/card-product', locals: {:product => product} %>
+          </div>
         <% end %>
       </div>
       <div class="col m4 l4 product-list">
