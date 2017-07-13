@@ -1,26 +1,41 @@
-<div class="container">
-  <div class="row">
-    <div class="col s12 m12">
-      <div class="card card-fb">
-        <div class="card-image">
-          <%= image_tag @user.facebook_picture_url %>
-        </div>
-
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a href="mesproduits.html">Sass</a></li>
-          <li><a href="Ajouter un produit">Components</a></li>
-          <li><a href="Chercher un produit">JavaScript</a></li>
-        </ul>
-
-
-      </div>
+<div class="row">
+  <div class="col s3">
+    <div class="container">
+      <%= image_tag @user.facebook_picture_url, class: "avatar-profile" %>
     </div>
   </div>
+  <div class="col s3">
+    <h4 class="profile-element">Profil de <%= @user.name %></h4>
+    <h4 class="profile-element">Registered address:</h4> <p><%= @user.address %></p>
+    <h4 class="profile-element">My reservations:</h4>
+    <% @id = current_user.id %>
+    <% @reservations = Reservation.where(user_id: @id) %>
+    <% @reservations.each do |reservation|%>
+    <ul class="list-unstyled">
+    <li><%= link_to reservation.product.name, reservation.product %></li>
+    <li>Date: <%= reservation.date %></li>
+    <li><%= link_to "Cancel reservation", user_path(current_user) %></li>
+    </ul>
+    <% end %>
 
+    <h4 class="profile-element">My products:</h4>
+    <% @id = current_user.id %>
+    <% @products = Product.where(user_id: @id) %>
+    <% @products.each do |product| %>
+    <ul class="list-unstyled">
+      <li><%= link_to product.name, product %> </li>
+      <li>Description: <%= product.description %></li>
+      <li>Price: <%= product.price %> $</li>
+      <li>Stock: <%= product.stock %></li>
+    </ul>
+    <% end %>
+  </div>
 </div>
 
+
+
 <%= javascript_tag do %>
-  $(document).ready(function() {
-    alert('<%= @alert_message %>');
-  });
+$(document).ready(function() {
+alert('<%= @alert_message %>');
+});
 <% end %>

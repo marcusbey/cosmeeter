@@ -1,14 +1,17 @@
 class ReservationsController < ApplicationController
   def new
     @reservation = Reservation.new
-    @product = Product.find(params[:product_id])
+    @product = Product.find(params[:id])
     @reservation.product = @product
+    @reservation.user = current_user
   end
 
   def create
     @reservation = Reservation.new(reservation_params)
+    @reservation.user = current_user
+    @reservation.product = Product.find(params[:product_id])
     if @reservation.save
-      redirect_to reservation_path(@reservation)
+      redirect_to user_path(current_user)
     else
       render :new
     end
@@ -34,8 +37,8 @@ class ReservationsController < ApplicationController
 
   def destroy
     set_reservation
-    @reservation.destroy
-    redirect_to root_path
+    @reservation.delete
+    redirect_to user_path(current_user)
   end
 
   private
