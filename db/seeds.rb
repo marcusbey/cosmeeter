@@ -1,5 +1,8 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+User.destroy_all
+Product.destroy_all
+
 user1 = User.create(name: "Milan", address:"5333 rue Casgrain", city:"Montreal", email:"milan@milan.com", password:"12345678")
 user2 = User.create(name: "Bob", address:"7342 rue drolet", city:"Montreal", email:"bob@milan.com", password:"12345678")
 user3 = User.create(name: "Romain", address:"3725 av Carlton", city:"Montreal", email:"romain@milan.com", password:"12345678")

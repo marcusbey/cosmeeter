@@ -10,18 +10,19 @@ body {
 }
 
 .wrapper {
-  width: 350px;
+  width: 320px;
   position: relative;
   border-radius: 7px 7px 7px 7px;
   /* VIA CSS MATIC https://goo.gl/cIbnS */
-  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 .product-img-size {
   height: 250px;
   width: 100%;
+  background-position: center;
 }
 
 .product-img {
@@ -38,15 +39,35 @@ body {
   background-color: white;
 }
 
+.card-body{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card-info {
+  flex: 1;
+}
+
+.card-avatar{
+  margin-right: 20px;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+}
 .product-text h1 {
-  font-size: 34px;
+  font-size: 20px;
   color: #474747;
 }
 
 .product-text h1,
 .product-price-btn p {
   font-family: 'Bentham', serif;
-  margin:0;
+  margin: 0;
 }
 
 .product-text h2 {
@@ -62,13 +83,13 @@ body {
 .product-text p {
   font-family: 'Playfair Display', serif;
   color: #8d8d8d;
-  line-height: 1.7em;
-  font-size: 15px;
+  line-height: 1.2em;
+  font-size: 12px;
   font-weight: lighter;
 }
 
 .product-details{
-  padding: 25px;
+  padding: 20px;
 }
 
 #price-text{
@@ -82,7 +103,7 @@ body {
 }
 
 .product-text {
-  height: 678px;
+  height: 500px;
 }
 
 
