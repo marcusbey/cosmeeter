@@ -4,9 +4,6 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <% if user_signed_in? %>
         <!-- Dropdown Trigger -->
-        <li class='hoverwhite'><%= link_to "Start Selling", new_product_path %></li>
-        <li class='hoverwhite'><%= link_to "FAQ", new_product_path %></li>
-        <li class='hoverwhite'><%= link_to "About", new_product_path %></li>
         <li>
           <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
           <a class='dropdown-button valign-wrapper' href='#' data-activates='dropdown1'>
@@ -14,7 +11,11 @@
             <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           </a>
         </li>
-                      <!-- Dropdown Structure -->
+        <li class='hoverwhite'><%= link_to "Start Selling", new_product_path %></li>
+        <li class='hoverwhite'><%= link_to "FAQ", new_product_path %></li>
+        <li class='hoverwhite'><%= link_to "About", new_product_path %></li>
+
+        <!-- Dropdown Structure -->
         <ul id='dropdown1' class='dropdown-content hover-override'>
           <li><%= link_to "Profile", user_path(current_user) %></li>
           <li class="divider"></li>
