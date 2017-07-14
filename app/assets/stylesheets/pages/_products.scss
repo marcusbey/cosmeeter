@@ -1,6 +1,7 @@
 
 #products-index .row, #products-index .col {
   padding: 0px;
+  padding-left: 20px;
   margin-bottom: 0px;
 }
 
@@ -11,11 +12,14 @@
   background: white;
 }
 
+.product {
+  margin-bottom: 40px;
+}
 
 .products-grid {
 overflow:scroll;
 overflow-x:hidden;
-height: 80vh;
+height: 100vh;
 padding-top: 0px;
 }
 
@@ -30,7 +34,7 @@ padding-top: 0px;
 }
 #map {
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 right: 0px;
 height: 100vh;
 }

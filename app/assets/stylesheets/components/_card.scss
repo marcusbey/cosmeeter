@@ -76,7 +76,7 @@ body {
 
 .product-text h2 {
   font-size: 13px;
-  font-family: 'Raleway', sans-serif;
+   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   color: #d2d2d2;
@@ -85,10 +85,10 @@ body {
 }
 
 .product-text p {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Signika', sans-serif;
   color: #8d8d8d;
   line-height: 1.3em;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: lighter;
 }
 
@@ -107,20 +107,20 @@ body {
 }
 
 #price-text{
-  background-color: rgba( 255, 255, 255, 0.5);
-  font-size: 34px;
+  background-color: rgba( 255, 255, 255, 0.7);
+  font-size: 25px;
   position: absolute;
   right:10px;
   top:10px;
   margin:0;
-  color: #FFA700;
+  color: rgba(0,0,0, 0.7);
   font-family: 'Signika', sans-serif;
   font-weight: 500;
 
 }
 
 .product-text {
-  height: 500px;
+  height: 520px;
 }
 
 
@@ -135,20 +135,21 @@ body {
   outline: none;
   text-align: center;
   padding: 10px;
-  background-color: #9cebd5;
+  background-color: #FFCE70;
   position: absolute;
   bottom: 0;
   width: 100%;
-  transition: background-color 0.3s ease-out;
+  transition: 0.3s ease-out;
   & a {
     color: white;
   }
   &:hover {
-    background-color: #79b0a1;
+    background-color: rgba(255, 167, 0, 0.8);
+    transition: 1s, ease-in-out;
   }
 }
 
 .spacing-card {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   width: 100%;
 }
