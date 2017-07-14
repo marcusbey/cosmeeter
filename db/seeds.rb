@@ -73,7 +73,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '24',
-                 user_id: user3.id}
+                 user_id: user3.id},
 
                  {name:'ELIXIR ANTI-AGING IN THE ROSE',
                  price:'34$',
@@ -84,7 +84,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '8',
-                 user_id: user4.id}
+                 user_id: user4.id},
 
                  {name:'PURIFYING & ASTRINGENT AYURVEDIC INFUSION TO AROMATIC PLANTS',
                  price:'32.5$',
@@ -95,7 +95,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '40',
-                 user_id: user4.id}
+                 user_id: user4.id},
 
                  {name:'SOLID REMOVER BALM "BLACK PICKING"',
                  price:'44$',
@@ -106,7 +106,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '25',
-                 user_id: user5.id}
+                 user_id: user5.id},
 
                  {name:'CREAMY MILK CLEANER WITHOUT RINSING WITH VANILLA AND SPICES BREAD',
                  price:'47$',
@@ -117,7 +117,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '20',
-                 user_id: user6.id}
+                 user_id: user6.id},
 
                  {name:'COLD CREAM TOILET MILK FOR COT TIPS',
                  price:'23$',
@@ -128,7 +128,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '24',
-                 user_id: user7.id}
+                 user_id: user7.id},
 
                  {name:'MILK AND VANILLA SOOTHING REMOVER OIL',
                  price:'37$',
@@ -139,7 +139,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '5',
-                 user_id: user8.id}
+                 user_id: user8.id},
 
                  {name:'ABRICOT & MUGUET RINSE ABOILING OIL GEL',
                  price:'27.5$',
@@ -150,7 +150,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '24',
-                 user_id: user9.id}
+                 user_id: user9.id},
 
                  {name:'FRESH CLEANSING FLUID GEL',
                  price:'24.5$',
@@ -161,7 +161,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '3',
-                 user_id: user10.id}
+                 user_id: user10.id},
 
                  {name:'CLEANING MICELLAR WATER FOR ALMOND DRY SKIN',
                  price:'18.5$',
@@ -172,7 +172,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '1',
-                 user_id: user11.id}
+                 user_id: user11.id},
 
                  {name:'"PURE VEGETABLE" MICELLAR WATER FOR OIL SKIN',
                  price:'18$',
@@ -183,7 +183,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '12',
-                 user_id: user12.id}
+                 user_id: user12.id},
 
                  {name:'ROSE FACE & EYES',
                  price:'19$',
@@ -194,7 +194,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '12',
-                 user_id: user13.id}
+                 user_id: user13.id},
 
                  {name:'BI-PHASIC BI-PHASIC REMOVER NEROLI AND BLOOD ORANGE',
                  price:'25.5$',
@@ -205,7 +205,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '16',
-                 user_id: user14.id}
+                 user_id: user14.id},
 
                  {name:'BI-PHASE "TRAVEL KIT" PUMP & CASSIS',
                  price:'14$',
@@ -216,7 +216,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '14',
-                 user_id: user15.id}
+                 user_id: user15.id},
 
                  {name:'DELICATE CLEANSING CREAM WITH ROSES PETALS',
                  price:'26$',
@@ -227,7 +227,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '3',
-                 user_id: user16.id}
+                 user_id: user16.id},
 
                  {name:'CREAM CLEANSING CREAM',
                  price:'33$',
@@ -238,7 +238,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '2',
-                 user_id: user17.id}
+                 user_id: user17.id},
 
                  {name:'CLEANSING CREAM "VANILLA INFUSION"',
                  price:'42.75$',
@@ -249,7 +249,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '4',
-                 user_id: user18.id}
+                 user_id: user18.id},
 
                  {name:'BI-PHASE PASSION & CASSIS DUO',
                  price:'27.5$',
@@ -260,7 +260,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '20',
-                 user_id: user19.id}
+                 user_id: user19.id},
 
                  {name:'SPRAY SOOTHING FOR IRRITATED SKIN',
                  price:'13.5$',
@@ -271,7 +271,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '2',
-                 user_id: user20.id}
+                 user_id: user20.id},
 
                  {name:'SPRAY DYNAMISING BI-PHASE ABRICOT & CARROT FACE AND BODY',
                  price:'33$',
@@ -282,7 +282,7 @@ Product.create!([{name: 'SWEET LOTION FOR THE FACE "AMANDE AND ORANGER FLOWERS"'
                  recipe: 'Ingredients: Beurre végétal Karité, Huile végétale Framboise BIO, Colorant naturel Rouge Baiser, Fragrance
                           cosmétique naturelle Framboise gourmande, Anti-oxydant Vitamine E. 120gr',
                  stock: '3',
-                 user_id: user20.id}
+                 user_id: user20.id},
 
                  {name:'PURITY WATER FROM ANTI-ACNE TO CORIANDER',
                  price:'19$',
