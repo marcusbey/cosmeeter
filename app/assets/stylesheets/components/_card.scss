@@ -4,9 +4,10 @@
 *
 * Chronicle Display Roman font was substituted for similar fonts from Google Fonts.
 */
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 body {
-  background-color: #fdf1ec;
+  background-color: #FFFEFA;
 }
 
 .wrapper {
@@ -50,18 +51,21 @@ body {
 }
 
 .card-avatar{
-  margin-right: 20px;
-  left: 0px;
-  top: 0px;
-  border-radius: 50%;
+  margin-right: 10px;
     img {
       width: 40px;
       height: 40px;
+      border-radius: 50%;
+      -moz-box-shadow:    1px 1px 3px 0px grey;
+      -webkit-box-shadow: 1px 1px 3px 0px grey;
+      box-shadow:         1px 1px 3px 0px grey;
     }
 }
 .product-text h1 {
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 400;
   color: #474747;
+
 }
 
 .product-text h1,
@@ -83,7 +87,7 @@ body {
 .product-text p {
   font-family: 'Playfair Display', serif;
   color: #8d8d8d;
-  line-height: 1.2em;
+  line-height: 1.3em;
   font-size: 12px;
   font-weight: lighter;
 }
@@ -92,14 +96,27 @@ body {
   padding: 20px;
 }
 
+.filter_bar p{
+  display: block;
+  float: left;
+  align: auto 0;
+  font-size: 18px;
+  padding: 20px;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
 #price-text{
-  font-family: 'Suranna', serif !important;
+  background-color: rgba( 255, 255, 255, 0.5);
   font-size: 34px;
   position: absolute;
   right:10px;
   top:10px;
   margin:0;
-  color: rgb(20,20,20);
+  color: #FFA700;
+  font-family: 'Signika', sans-serif;
+  font-weight: 500;
+
 }
 
 .product-text {

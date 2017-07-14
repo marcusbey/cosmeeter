@@ -8,9 +8,9 @@
     <div class= 'card-body'>
       <div class='card-avatar'>
         <% if @product.user.facebook_picture_url.nil? %>
-            <%= image_tag "https://randomuser.me/api/portraits/#{['woman', 'woman'].sample}/#{['3', '40', '73', '18','44', '69'].sample}.jpg", class: 'avatar' %>
+            <%= image_tag "https://randomuser.me/api/portraits/#{['women', 'women'].sample}/#{['3', '40', '73', '18','44', '69'].sample}.jpg" %>
            <% else %>
-            <%= cl_image_tag @product.user.facebook_picture_url, class: 'avatar' %>
+            <%= cl_image_tag @product.user.facebook_picture_url %>
           <%end %>
         </div>
       <div class='card-info'>
