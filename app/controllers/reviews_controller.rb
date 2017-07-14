@@ -1,4 +1,8 @@
 class ReviewsController < ApplicationController
+  def new
+    @review = Review.new
+  end
+
   def create
     @reservation = Reservation.find(params[:reservation_id])
     @user = User.find(params[:user_id])
