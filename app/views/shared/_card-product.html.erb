@@ -1,15 +1,27 @@
 <% @product = locals[:product] %>
 
-<div class='wrapper product-text background-white'>
+<div class='wrapper product-text background-white product-card'>
   <div class='product-img'>
     <%= cl_image_tag @product.photo.path, class: 'product-img-size' %>
   </div>
   <div class='product-details'>
-    <h1><%= @product.name %></h1>
-    <h2>by <%= @product.user.name %></h2>
+    <div class= 'card-body'>
+      <div class='card-avatar'>
+        <% if @product.user.facebook_picture_url.nil? %>
+            <%= image_tag "https://randomuser.me/api/portraits/#{['woman', 'woman'].sample}/#{['3', '40', '73', '18','44', '69'].sample}.jpg", class: 'avatar' %>
+           <% else %>
+            <%= cl_image_tag @product.user.facebook_picture_url, class: 'avatar' %>
+          <%end %>
+        </div>
+      <div class='card-info'>
+        <h1><%= @product.name %></h1>
+        <h2>by <%= @product.user.name %></h2>
+      </div>
+    </div>
     <p><%= @product.description %></p>
   </div>
-    <p id='price-text'><%= @product.price %> $</p>
-        <!-- <button type="button">View Product</button> -->
-    <div class="product-btn"><%= link_to "View Product", @product %></div>
+  <p id='price-text'><%= @product.price %> $</p>
+  <div class="product-btn"><%= link_to "View Product", @product %>
+
+  </div>
 </div>
