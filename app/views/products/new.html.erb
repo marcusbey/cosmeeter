@@ -1,17 +1,25 @@
-<div class="container">
-  <%= simple_form_for(@product) do |f| %>
-  <h2>New Product:</h2>
-  <%= f.error_notification %>
+<section id="signin"">
+  <div class="container">
+    <div class="row ">
+      <div class="card login-signup ">
 
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :stock %>
-  <%= f.input :photo, as: :attachinary %>
+        <%= simple_form_for(@product) do |f| %>
+        <div class="col s12">
+        <h3>New Product:</h3>
+        <%= f.error_notification %>
 
-  <%= f.button :submit %>
-  <% end %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :price %>
+        <%= f.input :stock %>
+        <%= f.input :photo, as: :attachinary %>
 
-  <%= link_to 'Back', root_path %>
+        <%= f.button :submit %>
+        <% end %>
 
-</div>
+        <%= link_to 'Back', root_path, class: "pink-text text-16px" %>
+
+      </div>
+    </div>
+  </div>
+</section>

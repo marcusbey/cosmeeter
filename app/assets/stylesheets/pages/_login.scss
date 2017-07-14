@@ -1,6 +1,7 @@
 .login-signup {
 min-height: 250px;
 padding: 30px 50px 30px 50px;
+margin: 50px auto;
 }
 
 #signin .row .col {
@@ -29,3 +30,9 @@ float: none;
 #signin textarea {
   background-color: #FFDFA4;
 }
+
+.btn {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
