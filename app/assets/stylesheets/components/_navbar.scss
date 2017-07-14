@@ -8,7 +8,7 @@
   border-radius: 30px;
   margin-top: 7px;
   margin-right: 6px;
-  margin-left: 8px;
+  margin-left: 14px;
 }
 
 nav {
@@ -16,19 +16,27 @@ nav {
   height: 70px;
 }
 
+.hover-avatar {
+  align-items: center;
+}
+
 nav ul a {
     color: rgba(0,0,0, 0.5);
     padding: 3px 50px 3px 50px;
 }
 nav ul li:hover{
+
+}
+
+.login {
+  background-color: rgba(216, 154, 225, 0.8);
+}
+
+.hoverwhite:hover {
   background-color: rgba(216, 154, 225, 0.8);
   a {
     color: rgba(255, 255, 255, 0.9);
   }
-}
-
-.login {
-background-color: rgba(216, 154, 225, 0.8);
 }
 
 nav .brand-logo {
@@ -40,10 +48,17 @@ nav .brand-logo {
 #dropdown1 {
   position: absolute !important;
   top: 64px !important;
-  left: 1546px!important;
+  left: 1526px!important;
+  color: rgba(216, 154, 225, 0.8);
 }
 
 .dropdown-content li > a, .dropdown-content li > span {
   padding: 14px 7px;
+  color: rgba(216, 154, 225, 0.8);
 }
 
+a.dropdown-button {
+    height: 70px;
+    overflow: hidden;
+    vertical-align: center;
+}
