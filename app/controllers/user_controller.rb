@@ -19,6 +19,8 @@ class UserController < ApplicationController
 
   def show
     set_user
+    @reservations = Reservation.where(user_id: @user.id)
+    @products = Product.where(user_id: @user.id)
   end
 
   def index
