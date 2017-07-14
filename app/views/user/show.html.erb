@@ -19,6 +19,23 @@
             <p class="text-16px">Date: <%= reservation.date %></p>
             <p><%= link_to "Cancel reservation", reservation_path(reservation.id), method: :delete %></p>
             <p>Reservation id #<%= reservation.id %></p>
+            <p class="text-16px">Reviews:</p>
+            <% reservation.product.reviews.each do |review| %>
+            <ul class="list-unstyled">
+            <li>Rating: <%= review.rating %> stars</li>
+            <li>Content: <%= review.content %></li>
+            </ul>
+            <% end %>
+            <div class="review-form">
+            <%= simple_form_for [reservation.product, @review] do |f| %>
+            <p>Add your review for this product (rating: 0 - 5) :</p>
+            <%= f.error_notification %>
+
+            <%= f.input :content, as: :text %>
+            <%= f.input :rating %>
+            <%= f.button :submit %>
+            <% end %>
+            </div>
           </div>
         </div>
         <% end %>

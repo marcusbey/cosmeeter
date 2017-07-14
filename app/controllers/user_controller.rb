@@ -19,6 +19,7 @@ class UserController < ApplicationController
 
   def show
     set_user
+    @review = Review.new
     @reservations = Reservation.where(user_id: @user.id)
     @products = Product.where(user_id: @user.id)
   end
