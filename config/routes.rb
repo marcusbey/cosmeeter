@@ -5,14 +5,13 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :products do
-    resources :reservations, only: [:create, :new]
+    resources :reviews, only: [:create]
   end
 
-  resources :user, only: [:show, :index, :new, :create] do
-      resources :reservations, only: [:create, :new, :destroy] do
-        resources :reviews, only: [:create]
-      end
-  end
+  resources :reservations, only: [:create, :new, :destroy]
+
+  resources :user, only: [:show, :index, :new, :create]
+
 
   mount Attachinary::Engine => "/attachinary"
 
