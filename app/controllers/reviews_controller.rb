@@ -4,15 +4,11 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.find(params[:reservation_id])
-    @user = User.find(params[:user_id])
-    @review = Review.new()
-    @review.content = review_params['content']
-    @review.rating = review_params['rating']
-    @review.user = User.find(review_params[:user_id])
-    @review.reservation = Reservation.find(params[:reservation_id])
+    @review = Review.new(review_params)
+    @review.product = Product.find(params[:product_id])
+    @review.user = User.find(current_user.id)
     if @review.save!
-      redirect_to reservation_path(@reservation)
+      redirect_to user_path(current_user)
     else
       render :new
     end
@@ -22,5 +18,11 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def review_params
+    params.require(:review).permit(:rating, :content)
   end
 end
